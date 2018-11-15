@@ -1,0 +1,52 @@
+body{
+	width:100%;
+	overflow: hidden;
+	margin: 0
+}
+#treeDom{
+	width: 100%;
+	overflow: hidden;
+}
+.treeBody{
+	width: 100%;
+	box-sizing: border-box;
+	padding-left: 2rem;
+	background-color: #ccc;
+	padding-top: 1px;
+}
+.treeList{
+	font-size: 2.5rem;
+	box-sizing: border-box;
+	width: 100%;
+	background-color: #222;
+	color:#fff;
+	margin-top: 1rem;
+}
+.treeList span b{
+	display: inline-block;
+	height: 3rem;
+	width: 3rem;
+	border-radius: .2rem;
+	background-color: #fff;
+	color:#222;
+	line-height: 3rem;
+	text-align: center;
+	font-size: 3.5rem;
+	margin-top: .5rem;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+/*vue transition*/
+.treeBtn-enter-active, .treeBtn-leave-active {
+  transition: opacity .5s;
+}
+.treeBtn-enter, .treeBtn-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+.treeBody-enter-active, .treeBody-leave-active {
+  transition: all .5s;
+}
+.treeBody-enter, .treeBody-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translate(100%);
+}

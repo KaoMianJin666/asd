@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tree</title>
+	<link rel="stylesheet" type="text/css" href="tree.css">
+	<script type="text/javascript" src = 'js/vue.min.js'></script>
+	<script type="text/javascript" src = 'js/tree.js'></script>
+</head>
+<body>
+	<div id = 'treeDom'>
+		<tree v-bind:dataall = 'data'></tree>
+	</div>
+</body>
+<script type="text/javascript">
+	var treeDom = new Vue({
+		el : '#treeDom',
+		data : {
+			data : null
+		},
+		methods : {
+			init : function(data){
+				this.data = data;
+			}
+		}
+	});
+	var data = [{
+				name : 1,
+				seen : false,
+				data : [{
+					name : 1.1,
+					seen : false
+				},{
+					name : 1.2,
+					seen : false,
+					data : [{
+						name : 1.21,
+						seen : false
+					},{
+						name : 1.22,
+						seen : false,
+					}]
+				}]
+			},{
+				name : 2,
+				seen : false,
+				data : [{
+					name : 2.1,
+					seen : false,
+					data : [{
+						name : 2.11,
+						seen : false
+					},{
+						name : 2.12,
+						seen : false,
+						data : [{
+							name : 2.121,
+							seen : false
+						},{
+							name : 2.122,
+							seen : false,
+						}]
+					}]
+				}]
+			},{
+				name : 3,
+				seen : false,
+				data : [{
+					name : 3.1,
+					seen : false
+				},{
+					name : 3.2,
+					seen : false,
+					data : [{
+						name : 3.21,
+						seen : false
+					},{
+						name : 3.22,
+						seen : false,
+					}]
+				}]
+			},{
+				name : 4,
+				seen : false,
+				data : [{
+					name : 4.1,
+					seen : false
+				},{
+					name : 4.2,
+					seen : false,
+					data : [{
+						name : 4.21,
+						seen : false
+					},{
+						name : 4.22,
+						seen : false,
+					}]
+				}]
+			},{
+				name : 5,
+				seen : false,
+				data : [{
+					name : 5.1,
+					seen : false
+				},{
+					name : 5.2,
+					seen : false,
+					data : [{
+						name : 5.21,
+						seen : false
+					},{
+						name : 5.22,
+						seen : false,
+					}]
+				}]
+			},{
+				name : 6,
+				seen : false,
+				data : [{
+					name : 6.1,
+					seen : false
+				},{
+					name : 6.2,
+					seen : false,
+					data : [{
+						name : 6.21,
+						seen : false
+					},{
+						name : 6.22,
+						seen : false,
+					}]
+				}]
+			}];
+	
+	treeDom.init(data);
+// 	var landType = [
+// 			{
+// 				'zw_dikuai' : '1',		//地块编号	
+// 				'zw_bianhao' : '1', 	//植物编号 1-12
+// 				'zw_zhuangtai' : '5'	//植物当前生长周期 1-6
+// 			},
+// 			{
+// 				'zw_dikuai' : '2',		//地块编号	
+// 				'zw_bianhao' : '3', 	//植物编号 1-12
+// 				'zw_zhuangtai' : '5'	//植物当前生长周期 1-6
+// 			},
+// 			{
+// 				'zw_dikuai' : '3',		//地块编号	
+// 				'zw_bianhao' : '6', 	//植物编号 1-12
+// 				'zw_zhuangtai' : '4'	//植物当前生长周期 1-6
+// 			},
+// 			{
+// 				'zw_dikuai' : '4',		//地块编号	
+// 				'zw_bianhao' : '1', 	//植物编号 1-12
+// 				'zw_zhuangtai' : '1'	//植物当前生长周期 1-6
+// 			},
+// 			{
+// 				'zw_dikuai' : '5',		//地块编号	
+// 				'zw_bianhao' : '1', 	//植物编号 1-12
+// 				'zw_zhuangtai' : '1'	//植物当前生长周期 1-6
+// 			},
+// 			{
+// 				'zw_dikuai' : '6',		//地块编号	
+// 				'zw_bianhao' : '1', 	//植物编号 1-12
+// 				'zw_zhuangtai' : '1'	//植物当前生长周期 1-6
+// 			},
+// 			{
+// 				'zw_dikuai' : '7',		//地块编号	
+// 				'zw_bianhao' : '1', 	//植物编号 1-12
+// 				'zw_zhuangtai' : '1'	//植物当前生长周期 1-6
+// 			},
+// 			{
+// 				'zw_dikuai' : '8',		//地块编号	
+// 				'zw_bianhao' : '1', 	//植物编号 1-12
+// 				'zw_zhuangtai' : '1'	//植物当前生长周期 1-6
+// 			},
+// 			{
+// 				'zw_dikuai' : '9',		//地块编号	
+// 				'zw_bianhao' : '1', 	//植物编号 1-12
+// 				'zw_zhuangtai' : '1'	//植物当前生长周期 1-6
+// 			},
+// 			{
+// 				'zw_dikuai' : '10',		//地块编号	
+// 				'zw_bianhao' : '1', 	//植物编号 1-12
+// 				'zw_zhuangtai' : '1'	//植物当前生长周期 1-6
+// 			},
+// 			{
+// 				'zw_dikuai' : '11',		//地块编号	
+// 				'zw_bianhao' : '1', 	//植物编号 1-12
+// 				'zw_zhuangtai' : '1'	//植物当前生长周期 1-6
+// 			},
+// 			{
+// 				'zw_dikuai' : '12',		//地块编号	
+// 				'zw_bianhao' : '1', 	//植物编号 1-12
+// 				'zw_zhuangtai' : '1'	//植物当前生长周期 1-6
+// 			}
+// 		]
+
+// var json = JSON.stringify(landType);
+// console.log(landType);
+// console.log(json);
+// var rejson = JSON.parse(json)
+// console.log(rejson);
+</script>
+</html>
